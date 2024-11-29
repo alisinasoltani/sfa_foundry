@@ -20,7 +20,7 @@
 }
 
 .swiper {
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   z-index: 0;
 }
@@ -56,6 +56,18 @@
 }
 .sf_bold {
   font-family: 'sf_bold';
+}
+
+.industries::before, .industries::after {
+  content: '';
+  width: 30vw;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #D52927;
+  display: inline-flex;
+  position: relative;
+  /* left: 5px; */
+  bottom: 10px;
 }
 
 @layer base {
