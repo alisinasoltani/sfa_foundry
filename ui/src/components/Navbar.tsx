@@ -20,7 +20,7 @@ import {
 
 export function Navbar() {
     return (
-        <Menubar className="h-[5rem] flex flex-row-reverse justify-between items-center sf_bold backdrop-blur-sm bg-opacity-20 fixed top-0 w-[100vw]">
+        <Menubar className="h-[5rem] flex flex-row-reverse justify-between items-center sf_bold border-0 rounded-none fixed top-0 w-[100vw] z-[100] blured">
         <MenubarMenu>
             <div className="flex flex-row justify-center items-center px-4">
             <Image src={logo} width={180} alt="sfa" />
