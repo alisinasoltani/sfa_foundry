@@ -20,7 +20,8 @@ import {
 
 export function Navbar() {
     return (
-        <Menubar className="h-[5rem] flex flex-row-reverse justify-between items-center sf_bold border-0 rounded-none fixed top-0 w-[100vw] z-[100] backdrop-blur-sm bg-[rgba(255,255,255,0.6)]">
+        <Menubar className="h-[5rem] flex flex-row-reverse justify-between items-center sf_medium border-0 rounded-none 
+        fixed top-0 w-[100vw] z-[100] backdrop-blur-sm bg-[rgba(255,255,255,0.6)]">
         <MenubarMenu>
             <div className="flex flex-row justify-center items-center px-4">
             <Image src={logo} width={180} alt="sfa" />
@@ -29,79 +30,59 @@ export function Navbar() {
         <div className="flex flex-row justify-start pr-12 w-full gap-8" style={{direction: 'rtl'}}>
             <MenubarMenu>
             <MenubarTrigger className="text-lg">شرکت</MenubarTrigger>
-            <MenubarContent>
+            <MenubarContent className="z-[120] text-right" style={{ direction: 'rtl' }}>
                 <MenubarItem>
-                New Tab <MenubarShortcut></MenubarShortcut>
+                درباره ما
                 </MenubarItem>
                 <MenubarItem>
-                New Window <MenubarShortcut>⌘N</MenubarShortcut>
+                تماس با ما
                 </MenubarItem>
-                <MenubarItem disabled>New Incognito Window</MenubarItem>
-                <MenubarSeparator />
-                <MenubarSub>
-                <MenubarSubTrigger>Share</MenubarSubTrigger>
-                <MenubarSubContent>
-                    <MenubarItem>Email link</MenubarItem>
-                    <MenubarItem>Messages</MenubarItem>
-                    <MenubarItem>Notes</MenubarItem>
-                </MenubarSubContent>
-                </MenubarSub>
-                <MenubarSeparator />
                 <MenubarItem>
-                Print... <MenubarShortcut>⌘P</MenubarShortcut>
+                همکاری با ما
                 </MenubarItem>
             </MenubarContent>
             </MenubarMenu>
             <MenubarMenu>
             <MenubarTrigger className="text-lg">تعهد</MenubarTrigger>
-            <MenubarContent>
+            <MenubarContent className="z-[120] text-right" style={{ direction: 'rtl' }}>
                 <MenubarItem>
-                Undo <MenubarShortcut>⌘Z</MenubarShortcut>
+                بررسی اجمالی
                 </MenubarItem>
                 <MenubarItem>
-                Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut>
+                تنوع
                 </MenubarItem>
-                <MenubarSeparator />
-                <MenubarSub>
-                <MenubarSubTrigger>Find</MenubarSubTrigger>
-                <MenubarSubContent>
-                    <MenubarItem>Search the web</MenubarItem>
-                    <MenubarSeparator />
-                    <MenubarItem>Find...</MenubarItem>
-                    <MenubarItem>Find Next</MenubarItem>
-                    <MenubarItem>Find Previous</MenubarItem>
-                </MenubarSubContent>
-                </MenubarSub>
-                <MenubarSeparator />
-                <MenubarItem>Cut</MenubarItem>
-                <MenubarItem>Copy</MenubarItem>
-                <MenubarItem>Paste</MenubarItem>
+                <MenubarItem>
+                کنترل کیفی
+                </MenubarItem>
             </MenubarContent>
             </MenubarMenu>
             <MenubarMenu>
             <MenubarTrigger className="text-lg">تولیدات</MenubarTrigger>
-            <MenubarContent>
-                <MenubarCheckboxItem>Always Show Bookmarks Bar</MenubarCheckboxItem>
-                <MenubarCheckboxItem checked>
-                Always Show Full URLs
-                </MenubarCheckboxItem>
-                <MenubarSeparator />
-                <MenubarItem inset>
-                Reload <MenubarShortcut>⌘R</MenubarShortcut>
+            <MenubarContent className="z-[120] text-right" style={{ direction: 'rtl' }}>
+                <MenubarItem>
+                صنایع فولاد و آهن
                 </MenubarItem>
-                <MenubarItem disabled inset>
-                Force Reload <MenubarShortcut>⇧⌘R</MenubarShortcut>
+                <MenubarItem>
+                معادن و صنایع وابسته
                 </MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem inset>Toggle Fullscreen</MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem inset>Hide Sidebar</MenubarItem>
+                <MenubarItem>
+                صنعت سیمان
+                </MenubarItem>
+                <MenubarItem>
+                صنعت نفت، گاز و پتروشیمی
+                </MenubarItem>
+                <MenubarItem>
+                صنعت مس
+                </MenubarItem>
+                <MenubarItem>
+                گلوله چدنی
+                </MenubarItem>
             </MenubarContent>
             </MenubarMenu>
             <MenubarMenu>
             <MenubarTrigger className="text-lg">نوآوری</MenubarTrigger>
-            <MenubarContent>
-                <MenubarRadioGroup value="benoit">
+            {/* <MenubarContent> */}
+                {/* <MenubarRadioGroup value="benoit">
                 <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
                 <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
                 <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
@@ -109,13 +90,13 @@ export function Navbar() {
                 <MenubarSeparator />
                 <MenubarItem inset>Edit...</MenubarItem>
                 <MenubarSeparator />
-                <MenubarItem inset>Add Profile...</MenubarItem>
-            </MenubarContent>
+                <MenubarItem inset>Add Profile...</MenubarItem> */}
+            {/* </MenubarContent> */}
             </MenubarMenu>
             <MenubarMenu>
             <MenubarTrigger className="text-lg">کاتالوگ ها</MenubarTrigger>
             <MenubarContent>
-                <MenubarRadioGroup value="benoit">
+                {/* <MenubarRadioGroup value="benoit">
                 <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
                 <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
                 <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
@@ -123,7 +104,7 @@ export function Navbar() {
                 <MenubarSeparator />
                 <MenubarItem inset>Edit...</MenubarItem>
                 <MenubarSeparator />
-                <MenubarItem inset>Add Profile...</MenubarItem>
+                <MenubarItem inset>Add Profile...</MenubarItem> */}
             </MenubarContent>
             </MenubarMenu>
             <MenubarMenu>
