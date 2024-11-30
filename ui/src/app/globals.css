@@ -70,6 +70,27 @@
   bottom: 10px;
 }
 
+.GrindingMediaBall::before {
+  content: '';
+  width: 60vw;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #D52927;
+  display: inline-flex;
+  position: relative;
+  left: 17%;
+  bottom: 10px;
+}
+
+.icon-black {
+  color: black !important;
+  filter: invert(0%) sepia(4%) saturate(0%) hue-rotate(234deg) brightness(96%) contrast(103%) !important;
+}
+.icon-white {
+  color: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(84deg) brightness(103%) contrast(101%) !important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
