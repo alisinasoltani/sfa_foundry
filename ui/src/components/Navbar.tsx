@@ -1,119 +1,91 @@
 "use client"
-import Image from "next/image";
-import logo from "@/app/logo.png";
 
-import {
-    Menubar,
-    MenubarCheckboxItem,
-    MenubarContent,
-    MenubarItem,
-    MenubarMenu,
-    MenubarRadioGroup,
-    MenubarRadioItem,
-    MenubarSeparator,
-    MenubarShortcut,
-    MenubarSub,
-    MenubarSubContent,
-    MenubarSubTrigger,
-    MenubarTrigger,
-} from "@/components/ui/menubar"
+import { useState } from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
-export function Navbar() {
-    return (
-        <Menubar className="h-[5rem] flex flex-row-reverse justify-between items-center sf_medium border-0 rounded-none 
-        fixed top-0 w-[100vw] z-[100] backdrop-blur-sm bg-[rgba(255,255,255,0.6)]">
-        <MenubarMenu>
-            <div className="flex flex-row justify-center items-center px-4">
-            <Image src={logo} width={180} alt="sfa" />
-            </div>
-        </MenubarMenu>
-        <div className="flex flex-row justify-start pr-12 w-full gap-8" style={{direction: 'rtl'}}>
-            <MenubarMenu>
-            <MenubarTrigger className="text-lg">شرکت</MenubarTrigger>
-            <MenubarContent className="z-[120] text-right" style={{ direction: 'rtl' }}>
-                <MenubarItem>
-                درباره ما
-                </MenubarItem>
-                <MenubarItem>
-                تماس با ما
-                </MenubarItem>
-                <MenubarItem>
-                همکاری با ما
-                </MenubarItem>
-            </MenubarContent>
-            </MenubarMenu>
-            <MenubarMenu>
-            <MenubarTrigger className="text-lg">تعهد</MenubarTrigger>
-            <MenubarContent className="z-[120] text-right" style={{ direction: 'rtl' }}>
-                <MenubarItem>
-                بررسی اجمالی
-                </MenubarItem>
-                <MenubarItem>
-                تنوع
-                </MenubarItem>
-                <MenubarItem>
-                کنترل کیفی
-                </MenubarItem>
-            </MenubarContent>
-            </MenubarMenu>
-            <MenubarMenu>
-            <MenubarTrigger className="text-lg">تولیدات</MenubarTrigger>
-            <MenubarContent className="z-[120] text-right" style={{ direction: 'rtl' }}>
-                <MenubarItem>
-                صنایع فولاد و آهن
-                </MenubarItem>
-                <MenubarItem>
-                معادن و صنایع وابسته
-                </MenubarItem>
-                <MenubarItem>
-                صنعت سیمان
-                </MenubarItem>
-                <MenubarItem>
-                صنعت نفت، گاز و پتروشیمی
-                </MenubarItem>
-                <MenubarItem>
-                صنعت مس
-                </MenubarItem>
-                <MenubarItem>
-                گلوله چدنی
-                </MenubarItem>
-            </MenubarContent>
-            </MenubarMenu>
-            <MenubarMenu>
-            <MenubarTrigger className="text-lg">نوآوری</MenubarTrigger>
-            {/* <MenubarContent> */}
-                {/* <MenubarRadioGroup value="benoit">
-                <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
-                <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
-                <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
-                </MenubarRadioGroup>
-                <MenubarSeparator />
-                <MenubarItem inset>Edit...</MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem inset>Add Profile...</MenubarItem> */}
-            {/* </MenubarContent> */}
-            </MenubarMenu>
-            <MenubarMenu>
-            <MenubarTrigger className="text-lg">کاتالوگ ها</MenubarTrigger>
-            <MenubarContent>
-                {/* <MenubarRadioGroup value="benoit">
-                <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
-                <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
-                <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
-                </MenubarRadioGroup>
-                <MenubarSeparator />
-                <MenubarItem inset>Edit...</MenubarItem>
-                <MenubarSeparator />
-                <MenubarItem inset>Add Profile...</MenubarItem> */}
-            </MenubarContent>
-            </MenubarMenu>
-            <MenubarMenu>
-            <MenubarTrigger className="text-lg">اخبار</MenubarTrigger>
-            </MenubarMenu>
-        </div>
-        <div className="flex flex-row justify-center items-center px-4">
-            EN
-        </div>
-        </Menubar>
-    )
+const drawerWidth = 240;
+const navItems = ['Home', 'About', 'Contact'];
+
+export default function DrawerAppBar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
+
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+      <Typography variant="h6" sx={{ my: 2 }}>
+        MUI
+      </Typography>
+      <Divider />
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }}>
+              <ListItemText primary={item} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
+  return (
+    <Box sx={{ display: 'flex' }}>
+      <CssBaseline />
+      <AppBar component="nav" className='backdrop-blur-sm bg-[rgba(255,255,255,0.6)] text-black'>
+        <Toolbar>
+            <Button
+            variant='outlined'
+            aria-label="open drawer"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' }, color: 'black' }}>
+            Open
+          </Button>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+          >
+            MUI
+          </Typography>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            {navItems.map((item) => (
+              <Button key={item} sx={{ color: '#000000' }}>
+                {item}
+              </Button>
+            ))}
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <nav>
+        <Drawer
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </nav>
+    </Box>
+  );
 }

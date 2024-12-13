@@ -32,7 +32,7 @@ const pagination = {
 const Slider = () => {
   return (
     // <div>
-        <Swiper pagination={pagination} navigation modules={[Pagination, Navigation]} className="mySwiper text-black">
+        <Swiper navigation modules={[Navigation]} className="mySwiper text-black">
         <SwiperSlide>
           <Image src={slide1} alt="" fill />
         </SwiperSlide>

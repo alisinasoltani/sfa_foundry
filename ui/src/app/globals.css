@@ -82,6 +82,10 @@
   bottom: 10px;
 }
 
+.licence_gr {
+  background: linear-gradient(270deg, rgba(23,44,98,1) 0%, rgba(24,57,120,1) 60%);
+}
+
 .icon-black {
   color: black !important;
   filter: invert(0%) sepia(4%) saturate(0%) hue-rotate(234deg) brightness(96%) contrast(103%) !important;
