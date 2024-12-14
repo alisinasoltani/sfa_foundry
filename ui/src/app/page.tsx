@@ -4,6 +4,7 @@ import Industries from "@/components/Industries";
 import GrindingMediaBall from "@/components/GrindingMediaBall";
 import Licences from "@/components/Licences";
 import Motto from "@/components/Motto";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       {/* <Industries /> */}
       {/* <GrindingMediaBall /> */}
       <Licences />
+      <Footer />
     </>
   );
 }

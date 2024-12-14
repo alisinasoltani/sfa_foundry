@@ -14,7 +14,7 @@ const Licences = () => {
           <h2 className="sf_bold text-[2rem] text-center">
               قابل اعتماد و تایید شده
           </h2>
-          <span className="sf_medium text-2xl text-center max-w-[50vw]">
+          <span className="sf_medium text-2xl text-center max-w-[50vw]" style={{ direction: 'rtl' }}>
           شرکت سپاهان فولاد آتشگاه، دارای گواهینامه های ISO 14001:2004 و ISO 9001:2008 است.
           کلیه مراحل تولید در این شرکت طبق دستورالعمل های سیستم کنترل کیفیت انجام می شود.
           </span>

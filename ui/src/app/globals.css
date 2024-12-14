@@ -70,6 +70,18 @@
   bottom: 10px;
 }
 
+.address::after {
+  content: '';
+  width: 18vw;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #D52927;
+  display: inline-flex;
+  position: relative;
+  left: -5px;
+  bottom: 5px;
+}
+
 .GrindingMediaBall::before {
   content: '';
   width: 60vw;
