@@ -45,7 +45,7 @@ export default function DrawerAppBar() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" className='backdrop-blur-sm bg-[rgba(255,255,255,0.6)] text-black'>
+      <AppBar component="nav" className='backdrop-blur-sm bg-[rgba(255,255,255,0.6)] text-black z-[200]'>
         <Toolbar>
             <Button
             variant='outlined'

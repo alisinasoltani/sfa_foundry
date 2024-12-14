@@ -10,7 +10,7 @@ const Motto = () => {
         triggerOnce: true,
     });
     return (
-    <Box className="flex flex-col justify-center items-center py-[8rem]">
+    <Box className="flex flex-col justify-center items-center py-[8rem] z-1">
         <Typography variant="h4" component="h6" className="sf_semi max-w-[50vw] text-center">
         بیش از ۴۰سال سابقه و تجربه در زمینه ریخته گری در راه خود کفایی با بهره گیری از نیروهای متخصص و جوان و مدیران مجرب
         </Typography>

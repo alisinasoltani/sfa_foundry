@@ -11,9 +11,12 @@ export default function Home() {
       <DrawerAppBar />
       <Slider />
       <Motto />
+      <div className="py-[10rem] w-100 h-[100vh] bg-[#16163C] text-white flex flex-col justify-center items-center relative z-[10] rounded-[2rem]">
+        ?
+      </div>
       {/* <Industries /> */}
       {/* <GrindingMediaBall /> */}
-      {/* <Licences /> */}
+      <Licences />
     </>
   );
 }
