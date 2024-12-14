@@ -28,16 +28,23 @@
   color: #ffffff !important;
   width: 2.8rem !important;
   height: 2.8rem !important;
-  background-color: rgba(0,0,0,0.3);
-  border-radius: 100% 100%;
+  /* background-color: rgba(0,0,0,0.3); */
+  background-color: rgba(218,0,1,0.75);
+  border-radius: 10px;
   --swiper-navigation-size: 1.5rem;
   font-weight: 900;
 }
-.swiper-button-next {
-  margin-right: 1rem;
-}
 .swiper-button-prev {
+  margin-right: 1rem;
+  /* position: relative !important; */
+  /* z-index: 15 !important; */
+  top: 85vh !important;
+  left: 93vw !important;
+}
+.swiper-button-next {
   margin-left: 1rem;
+  top: 76vh !important;
+  left: 92vw !important;
 }
 
 .blured {
