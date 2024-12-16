@@ -47,6 +47,11 @@
   left: 92vw !important;
 }
 
+.css-c99jwy-MuiButtonBase-root-MuiTab-root {
+  font-size: 1rem;
+  font-family: sf_bold;
+}
+
 .blured {
   backdrop-filter: opacity(20%) blur(40px) saturate(150%) !important;
   -webkit-backdrop-filter: opacity(20%) blur(40px) saturate(150%) !important;
