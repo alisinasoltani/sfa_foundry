@@ -1,6 +1,6 @@
 import DrawerAppBar from "@/components/Navbar";
 import Slider from "@/components/Slider";
-import LinkedSwipers from "@/components/Industries";
+import LinkedSwipers from "@/components/News";
 import GrindingMediaBall from "@/components/GrindingMediaBall";
 import Licences from "@/components/Licences";
 import Motto from "@/components/Motto";
