@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import readMore from "@/app/public/icons/readMore.svg";
+import readMore from "@/public/icons/readMore.svg";
 import Image from "next/image";
 
 interface news {

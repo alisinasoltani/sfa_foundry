@@ -1,6 +1,6 @@
 // import Image from "next/image";
 import Link from "next/link";
-// import moreInfoIcon from "@/app/public/icons/moreInfo.svg";
+// import moreInfoIcon from "@/public/icons/moreInfo.svg";
 
 const MoreInfo = ({ link, className }: { link: string, className: string }) => {
   return (

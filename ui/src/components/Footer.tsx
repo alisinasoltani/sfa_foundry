@@ -1,11 +1,11 @@
 import icon from "@/app/favicon.ico";
 import Image from "next/image";
-import facebookIcon from "@/app/public/icons/facebook.svg";
-import instagramIcon from "@/app/public/icons/instagram.svg";
-import whatsappIcon from "@/app/public/icons/whatsapp.svg";
+import facebookIcon from "@/public/icons/facebook.svg";
+import instagramIcon from "@/public/icons/instagram.svg";
+import whatsappIcon from "@/public/icons/whatsapp.svg";
 import Link from "next/link";
-import phoneIcone from "@/app/public/icons/phone.svg";
-import faxIcone from "@/app/public/icons/fax.svg";
+import phoneIcone from "@/public/icons/phone.svg";
+import faxIcone from "@/public/icons/fax.svg";
 
 const Footer = () => {
   return (

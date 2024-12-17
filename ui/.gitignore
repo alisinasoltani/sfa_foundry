@@ -15,9 +15,6 @@
 
 # production
 /build
-/deploy
-/deploy/
-deploy
 
 # misc
 .DS_Store

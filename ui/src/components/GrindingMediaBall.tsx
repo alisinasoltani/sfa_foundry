@@ -1,7 +1,7 @@
 import Image from "next/image";
-import GrindingMediaBallImage from "@/app/public/GrindingMediaBall/GrindingMediaBall.png";
+import GrindingMediaBallImage from "@/public/GrindingMediaBall/GrindingMediaBall.png";
 import MoreInfo from "./MoreInfo";
-import waves from "@/app/public/GrindingMediaBall/waves.png";
+import waves from "@/public/GrindingMediaBall/waves.png";
 
 const GrindingMediaBall = () => {
   return (
