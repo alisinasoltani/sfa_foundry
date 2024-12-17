@@ -6,11 +6,11 @@ import Tab from '@mui/material/Tab';
 import { Button, styled } from '@mui/material';
 import Box from '@mui/material/Box';
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
-import cement from "@/public/industries/cement.png";
-import copper from "@/public/industries/copper.png";
-import related from "@/public/industries/related.png";
-import steel from "@/public/industries/steel.png";
-import mediaBall from "@/public/industries/sfa_opt.png";
+import cement from "@/app/public/industries/cement.png";
+import copper from "@/app/public/industries/copper.png";
+import related from "@/app/public/industries/related.png";
+import steel from "@/app/public/industries/steel.png";
+import mediaBall from "@/app/public/industries/sfa_opt.png";
 import Image from 'next/image';
 
 interface TabPanelProps {

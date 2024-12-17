@@ -17,9 +17,9 @@ import Menu, { MenuProps } from '@mui/material/Menu';
 import MenuItem, { MenuItemProps } from '@mui/material/MenuItem';
 import { styled } from '@mui/material/styles';
 import logo from "@/app/logo.png";
-import arrowLeft from "@/public/icons/arrowLeft.svg";
-import englishLang from "@/public/icons/englishLang.svg";
-import arrowDown from "@/public/icons/arrowDown.svg";
+import arrowLeft from "@/app/public/icons/arrowLeft.svg";
+import englishLang from "@/app/public/icons/englishLang.svg";
+import arrowDown from "@/app/public/icons/arrowDown.svg";
 import Image from 'next/image';
 
 const drawerWidth = 240;

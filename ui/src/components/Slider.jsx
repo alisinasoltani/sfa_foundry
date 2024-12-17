@@ -4,15 +4,15 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 
-import slide1 from "@/public/slider/slide1.png"
-import slide2 from "@/public/slider/slide2.jpg"
-import slide3 from "@/public/slider/slide3.jpg"
-import slide4 from "@/public/slider/slide4.jpg"
-import slide5 from "@/public/slider/slide5.jpg"
-import slide6 from "@/public/slider/slide6.jpg"
-import slide7 from "@/public/slider/slide7.jpg"
-import slide8 from "@/public/slider/slide8.jpg"
-import slide9 from "@/public/slider/slide9.jpg"
+import slide1 from "@/app/public/slider/slide1.png"
+import slide2 from "@/app/public/slider/slide2.jpg"
+import slide3 from "@/app/public/slider/slide3.jpg"
+import slide4 from "@/app/public/slider/slide4.jpg"
+import slide5 from "@/app/public/slider/slide5.jpg"
+import slide6 from "@/app/public/slider/slide6.jpg"
+import slide7 from "@/app/public/slider/slide7.jpg"
+import slide8 from "@/app/public/slider/slide8.jpg"
+import slide9 from "@/app/public/slider/slide9.jpg"
 
 // Import Swiper styles
 import 'swiper/css';

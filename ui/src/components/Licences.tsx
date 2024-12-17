@@ -1,8 +1,8 @@
 import Image from "next/image";
-import waves from "@/public/licences/waves_vertical.png";
-import licence1 from "@/public/licences/licence1.png"
-import licence2 from "@/public/licences/licence2.png"
-import licence3 from "@/public/licences/licence3.png"
+import waves from "@/app/public/licences/waves_vertical.png";
+import licence1 from "@/app/public/licences/licence1.png"
+import licence2 from "@/app/public/licences/licence2.png"
+import licence3 from "@/app/public/licences/licence3.png"
 
 const Licences = () => {
   return (
