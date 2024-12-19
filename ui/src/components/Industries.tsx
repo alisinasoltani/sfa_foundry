@@ -23,7 +23,7 @@ const IndustryTabs = styled(Tabs)<TabsProps>(({ theme }) => ({
     '.MuiTab-root MuiTab-textColorPrimary': {
         color: '#DA0001'
     },
-    width: '40vw',
+    width: '45vw',
     direction: 'rtl',
 }));
 
@@ -33,14 +33,14 @@ function CustomTabPanel(props: TabPanelProps) {
   return (
     <div
       role="tabpanel"
-      className='text-white w-[40vw]'
+      className='text-white w-[45vw]'
       style={{ direction: 'rtl' }}
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }} className="flex flex-col gap-4">{children}</Box>}
+      {value === index && <Box sx={{ p: 3 }} className="flex flex-col gap-6">{children}</Box>}
     </div>
   );
 }
@@ -69,10 +69,10 @@ export default function BasicTabs() {
   }
 
   return (
-    <Box sx={{ width: '100%', paddingInline: '10vw' }} className="py-[6rem] w-full flex flex-row-reverse justify-center items-center gap-10">
+    <Box sx={{ width: '100%', paddingInline: '4rem' }} className="py-[6rem] w-full flex flex-row-reverse justify-center items-center gap-10">
       <Swiper
-        className="h-[60vh] w-[40vw]"
-        style={{ height: '40vh', width: '40vw' }}
+        direction='vertical'
+        style={{ height: '60vh', width: '50vw' }}
         onSwiper={(swiper) => (industriesSwiperRef.current = swiper)}
         onSlideChange={(swiper) => handleTabChange(swiper)}
         slidesPerView={1}>
@@ -92,7 +92,7 @@ export default function BasicTabs() {
           <Image src={mediaBall} fill alt='grinding media ball product' />
         </SwiperSlide>
       </Swiper>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider' }} className="border-[1px] rounded-xl border-[#DA0001]">
         <IndustryTabs value={value} textColor='secondary' onChange={handleChange} variant='fullWidth' aria-label="basic tabs example" indicatorColor='secondary'>
           <Tab sx={{ color: '#ffffff' }} label="مس" {...a11yProps(0)} onClick={() => handleSlideChange(0)} />
           <Tab sx={{ color: '#ffffff' }} label="آهن و فولاد" {...a11yProps(1)} onClick={() => handleSlideChange(1)} />
@@ -104,11 +104,11 @@ export default function BasicTabs() {
           <h2 className="sf_bold text-2xl">
             صنعت مس
           </h2>
-          <span className="pt-4 sf_light text-2xl">
+          <span className="sf_light text-2xl">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد.
           </span>
-          <Button className="text-[#DA0001] text-xl rounded-xl py-2 sf_bold inline-flex flex-row gap-2 w-[15rem]" 
-          variant="outlined" sx={{ color: 'DA0001' }} color='secondary'>
+          <Button className="text-[white] text-xl rounded-xl py-2 sf_medium inline-flex flex-row gap-2 w-[15rem]" 
+          variant="outlined" sx={{ color: 'DA0001' }} color='primary'>
             محصولات صنعت مس
           </Button>
         </CustomTabPanel>
@@ -116,11 +116,11 @@ export default function BasicTabs() {
           <h2 className="sf_bold text-2xl">
             صنعت مس
           </h2>
-          <span className="pt-4 sf_light text-2xl">
+          <span className="sf_light text-2xl">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد.
           </span>
-          <Button className="text-[#DA0001] text-xl rounded-xl py-2 sf_bold inline-flex flex-row gap-2 w-[15rem]" 
-          variant="outlined" sx={{ color: 'DA0001' }} color='secondary'>
+          <Button className="text-[white] text-xl rounded-xl py-2 sf_medium inline-flex flex-row gap-2 w-[15rem]" 
+          variant="outlined" sx={{ color: 'DA0001' }} color='primary'>
             محصولات صنعت مس
           </Button>
         </CustomTabPanel>
@@ -128,11 +128,11 @@ export default function BasicTabs() {
           <h2 className="sf_bold text-2xl">
             صنعت مس
           </h2>
-          <span className="pt-4 sf_light text-2xl">
+          <span className="sf_light text-2xl">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد.
           </span>
-          <Button className="text-[#DA0001] text-xl rounded-xl py-2 sf_bold inline-flex flex-row gap-2 w-[15rem]" 
-          variant="outlined" sx={{ color: 'DA0001' }} color='secondary'>
+          <Button className="text-[white] text-xl rounded-xl py-2 sf_medium inline-flex flex-row gap-2 w-[15rem]" 
+          variant="outlined" sx={{ color: 'DA0001' }} color='primary'>
             محصولات صنعت مس
           </Button>
         </CustomTabPanel>
@@ -140,11 +140,11 @@ export default function BasicTabs() {
           <h2 className="sf_bold text-2xl">
             صنعت مس
           </h2>
-          <span className="pt-4 sf_light text-2xl">
+          <span className="sf_light text-2xl">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد.
           </span>
-          <Button className="text-[#DA0001] text-xl rounded-xl py-2 sf_bold inline-flex flex-row gap-2 w-[15rem]" 
-          variant="outlined" sx={{ color: 'DA0001' }} color='secondary'>
+          <Button className="text-[white] text-xl rounded-xl py-2 sf_medium inline-flex flex-row gap-2 w-[15rem]" 
+          variant="outlined" sx={{ color: 'DA0001' }} color='primary'>
             محصولات صنعت مس
           </Button>
         </CustomTabPanel>
@@ -152,11 +152,11 @@ export default function BasicTabs() {
           <h2 className="sf_bold text-2xl">
             صنعت مس
           </h2>
-          <span className="pt-4 sf_light text-2xl">
+          <span className="sf_light text-2xl">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد.
           </span>
-          <Button className="text-[#DA0001] text-xl rounded-xl py-2 sf_bold inline-flex flex-row gap-2 w-[15rem]" 
-          variant="outlined" sx={{ color: 'DA0001' }} color='secondary'>
+          <Button className="text-[white] text-xl rounded-xl py-2 sf_medium inline-flex flex-row gap-2 w-[15rem]" 
+          variant="outlined" sx={{ color: 'white' }} color='primary'>
             محصولات صنعت مس
           </Button>
         </CustomTabPanel>
