@@ -39,17 +39,17 @@
   /* position: relative !important; */
   /* z-index: 15 !important; */
   top: 85vh !important;
-  left: 93vw !important;
+  left: calc(100vw - 6rem) !important;
 }
 .swiper-button-next {
   margin-left: 1rem;
   top: 76vh !important;
-  left: 92vw !important;
+  left: calc(100vw - 7rem) !important;
 }
 
 .css-c99jwy-MuiButtonBase-root-MuiTab-root {
-  font-size: 1rem;
-  font-family: sf_bold;
+  font-size: 0.9rem;
+  font-family: sf_semi;
 }
 
 .blured {

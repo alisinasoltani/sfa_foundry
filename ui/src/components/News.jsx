@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import News from "./NewsItem";
 import Image from "next/image";
-import newsPicture from "@/public/news/news1.png";
+import newsPicture from "@/public/news/Exhibition.jpg";
 
 const LinkedSwipers = () => {
   const swiper1Ref = useRef(null);
