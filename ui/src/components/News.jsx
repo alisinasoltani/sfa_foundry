@@ -17,7 +17,7 @@ const LinkedSwipers = () => {
   };
 
   return (
-    <div className="w-full px-[20vw]">
+    <div className="w-full px-[20vw] pt-[8rem] overflow-hidden">
       <Swiper
         className="h-[40vh]"
         style={{ height: '40vh' }}
@@ -44,19 +44,37 @@ const LinkedSwipers = () => {
         </SwiperSlide>
       </Swiper>
       <Swiper
-        className="felx flex-row justify-center items-center w-full rounded-3xl overflow-hidden"
-        style={{ height: '80vh' }}
+        className="news-slider w-[100vw] felx flex-row justify-center items-center right-[10vw] rounded-3xl overflow-hidden"
+        style={{ height: '80vh', width: '80vw' }}
         onSwiper={(swiper) => (swiper2Ref.current = swiper)}
         onSlideChange={(swiper) => handleSlideChange(swiper, swiper1Ref)}
-        slidesPerView={1}>
+        slidesPerView={2}
+        spaceBetween={100}
+        effect="coverflow"
+        coverflowEffect={{
+          rotate: 20,
+          stretch: 20,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}>
         <SwiperSlide
         className="felx flex-row justify-center items-center w-full">
           <Image src={newsPicture} fill alt="news picture" />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="felx flex-row justify-center items-center w-full">
           <Image src={newsPicture} fill alt="news picture" />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="felx flex-row justify-center items-center w-full">
+          <Image src={newsPicture} fill alt="news picture" />
+        </SwiperSlide>
+        <SwiperSlide className="felx flex-row justify-center items-center w-full">
+          <Image src={newsPicture} fill alt="news picture" />
+        </SwiperSlide>
+        <SwiperSlide className="felx flex-row justify-center items-center w-full">
+          <Image src={newsPicture} fill alt="news picture" />
+        </SwiperSlide>
+        <SwiperSlide className="felx flex-row justify-center items-center w-full">
           <Image src={newsPicture} fill alt="news picture" />
         </SwiperSlide>
       </Swiper>

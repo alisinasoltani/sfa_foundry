@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @font-face {
   font-family: 'sf_light';
   src: url("./fonts/SFArabic-Light.ttf");
@@ -121,6 +120,7 @@
 
 @layer base {
   :root {
+  --AppBar-background: #ffffff;
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -182,4 +182,34 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.vertical-swiper-container {
+  position: relative;
+  width: 40vw;
+  height: 55vh;
+  perspective: 1000px; /* Adds 3D perspective */
+}
+
+.news-slider {
+
+  perspective: 1000px; /* Adds 3D perspective */
+}
+
+.vertical-swiper-slide {
+  width: 40vw !important;
+  height: 50vh !important;
+  transition: transform 0.5s ease;
+  transform-origin: center center;
+  will-change: transform; /* Optimize rendering */
+}
+
+.vertical-carousel-item {
+  background: none;
+  border-radius: 30px !important;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
 }

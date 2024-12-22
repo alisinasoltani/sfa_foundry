@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from 'react';
-import AppBar from '@mui/material/AppBar';
+import AppBar, { AppBarProps } from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
@@ -32,6 +32,12 @@ const NavbarMenuItem = styled(MenuItem)<MenuItemProps>(({ theme }) => ({
   fontSize: '1rem',
   fontFamily: 'sf_semi',
   width: '12rem'
+}));
+
+const LightAppBar = styled(AppBar)<AppBarProps>(({ theme }) => ({
+  fontFamily: "sf_semi",
+  backgroundColor: "rgba(255,255,255,0.6)",
+  backdropFilter: "blur(4px)"
 }));
 
 export default function DrawerAppBar() {
@@ -73,7 +79,7 @@ export default function DrawerAppBar() {
   return (
     <Box sx={{ display: 'flex', direction: 'rtl' }}>
       <CssBaseline />
-      <AppBar component="nav" className='w-full flex flex-row justify-center items-center backdrop-blur-sm bg-[rgba(255,255,255,0.6)] text-black py-4 z-[200]'>
+      <LightAppBar component="nav" className='w-full flex flex-row justify-center items-center backdrop-blur-sm bg-[rgba(255,255,255,0.6)] text-black py-4 z-[200]'>
         <Toolbar className='w-full flex flex-row justify-between items-center gap-8'>
           <Button
             variant='outlined'
@@ -264,7 +270,7 @@ export default function DrawerAppBar() {
             </Box>
           </Box>
         </Toolbar>
-      </AppBar>
+      </LightAppBar>
       <nav>
         <Drawer
           variant="temporary"
