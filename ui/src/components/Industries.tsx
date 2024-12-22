@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Tabs, { TabsProps } from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { Button, styled } from '@mui/material';
@@ -12,6 +12,7 @@ import related from "@/public/industries/related.png";
 import steel from "@/public/industries/steel.png";
 import mediaBall from "@/public/industries/sfa_opt.png";
 import Image from 'next/image';
+import Vertical3DCarousel from "@/components/Vertical3DCarousel";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -23,9 +24,41 @@ const IndustryTabs = styled(Tabs)<TabsProps>(({ theme }) => ({
     '.MuiTab-root MuiTab-textColorPrimary': {
         color: '#DA0001'
     },
-    width: '45vw',
+    width: '43vw',
     direction: 'rtl',
 }));
+
+// const Vertical3DCarousel: React.FC<{
+//   items: string[];
+//   onSwiper?: (swiper: any) => void;
+//   onSlideChange?: (swiper: any) => void;
+// }> = ({ items, onSwiper, onSlideChange }) => {
+//   return (
+//     <Swiper
+//       direction="vertical"
+//       effect="coverflow"
+//       slidesPerView={3}
+//       centeredSlides={true}
+//       coverflowEffect={{
+//         rotate: 30,
+//         stretch: 50,
+//         depth: 200,
+//         modifier: 1,
+//         slideShadows: false,
+//       }}
+//       onSwiper={onSwiper}
+//       onSlideChange={onSlideChange}
+//       className="vertical-carousel"
+//     >
+//       {items.map((item, index) => (
+//         <SwiperSlide key={index} className="vertical-slide bg-red-400">
+//           {item}
+//         </SwiperSlide>
+//       ))}
+//     </Swiper>
+//   );
+// };
+
 
 function CustomTabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
@@ -33,7 +66,7 @@ function CustomTabPanel(props: TabPanelProps) {
   return (
     <div
       role="tabpanel"
-      className='text-white w-[45vw]'
+      className='text-white w-[43vw]'
       style={{ direction: 'rtl' }}
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
@@ -53,46 +86,59 @@ function a11yProps(index: number) {
 }
 
 export default function BasicTabs() {
-  const [value, setValue] = useState(0);
+  const industriesSwiperRef = useRef<SwiperClass | null>(null);
+  const [value, setValue] = useState<number>(0);
+
+  useEffect(() => {
+    if (industriesSwiperRef.current) {
+      // Swiper is initialized, let's access the Swiper instance
+      console.log("Swiper instance is initialized:", industriesSwiperRef.current);
+    }
+  }, [industriesSwiperRef.current]);
+
+  const verticalSwiperRef = useRef<any>(null); // Ref for the vertical Swiper
+  const horizontalSwiperRef = useRef<any>(null); // Ref for the horizontal Swiper
+
+  const handleVerticalSlideChange = (swiper: any) => {
+    if (horizontalSwiperRef.current) {
+      setValue(swiper?.realIndex); // Sync vertical slider
+      // horizontalSwiperRef.current.slideTo(swiper?.realIndex); // Sync horizontal slider
+    }
+  };
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 
-  const industriesSwiperRef = useRef<SwiperClass | null>(null);
-  const handleSlideChange = (slide: number) => {
-      industriesSwiperRef?.current?.slideTo(slide);
-    // }
+  const handleSlideChange = (swiper: any) => {
+    if (verticalSwiperRef.current) {
+      verticalSwiperRef.current.slideTo(swiper?.realIndex);
+    }
   };
-  const handleTabChange = (swiper: SwiperClass) => {
-    setValue(swiper.activeIndex);
-  }
 
   return (
-    <Box sx={{ width: '100%', paddingInline: '4rem' }} className="py-[6rem] w-full flex flex-row-reverse justify-center items-center gap-10">
-      <Swiper
-        direction='vertical'
-        style={{ height: '60vh', width: '50vw' }}
-        onSwiper={(swiper) => (industriesSwiperRef.current = swiper)}
-        onSlideChange={(swiper) => handleTabChange(swiper)}
-        slidesPerView={1}>
-        <SwiperSlide>
-          <Image src={copper} fill alt='copper industry products' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={steel} fill alt='steel industry products' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={cement} fill alt='cement industry products' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={related} fill alt='related industries products' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src={mediaBall} fill alt='grinding media ball product' />
-        </SwiperSlide>
-      </Swiper>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }} className="border-[1px] rounded-xl border-[#DA0001]">
+    <Box sx={{ width: '100%', paddingInline: '4rem' }} className="py-[12rem] w-full flex flex-row-reverse justify-center items-center gap-[6rem] h-[100vh] overflow-hidden">
+      {/* <Vertical3DCarousel items={["Slide 1", "Slide 2", "Slide 3", "Slide 4", "Slide 5"]} onSwiper={(swiper) => {verticalSwiperRef.current = swiper;}} onSlideChange={handleVerticalSlideChange} /> */}
+      <Vertical3DCarousel onSwiper={(swiper) => {verticalSwiperRef.current = swiper;}} onSlideChange={handleVerticalSlideChange} />
+      {/* <Swiper
+      onSwiper={(swiper) => {
+        horizontalSwiperRef.current = swiper;
+      }}
+      onSlideChange={handleHorizontalSlideChange}
+      slidesPerView={1}
+      centeredSlides={true}
+      navigation
+      pagination={{ clickable: true }}
+      className="horizontal-carousel">
+      {["Slide 1", "Slide 2", "Slide 3", "Slide 4", "Slide 5"].map(
+        (item, index) => (
+          <SwiperSlide key={index} className="horizontal-slide">
+            {item}
+          </SwiperSlide>
+        )
+      )}
+      </Swiper> */}
+      <Box sx={{ borderBottom: 1, borderColor: 'divider' }} className=" border-[1px] rounded-xl border-[#DA0001]">
         <IndustryTabs value={value} textColor='secondary' onChange={handleChange} variant='fullWidth' aria-label="basic tabs example" indicatorColor='secondary'>
           <Tab sx={{ color: '#ffffff' }} label="مس" {...a11yProps(0)} onClick={() => handleSlideChange(0)} />
           <Tab sx={{ color: '#ffffff' }} label="آهن و فولاد" {...a11yProps(1)} onClick={() => handleSlideChange(1)} />
