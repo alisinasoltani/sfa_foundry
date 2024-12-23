@@ -5,7 +5,7 @@ import { EffectCoverflow } from "swiper/modules";
 import Image from "next/image";
 import cementIndustryPicture from "@/public/industries/cement.png";
 import copperIndustryPicture from "@/public/industries/copper.png";
-import oilIndustryPicture from "@/public/industries/oil.png";
+// import oilIndustryPicture from "@/public/industries/oil.png";
 import relatedIndustryPicture from "@/public/industries/related.png";
 import grindingBallPicture from "@/public/industries/sfa_opt.png";
 import steelIndustryPicture from "@/public/industries/steel.png";
@@ -35,7 +35,7 @@ const Vertical3DCarousel: React.FC<{
       effect: "coverflow",
       coverflowEffect: {
         rotate: 30,
-        stretch: 50,
+        stretch: 100,
         depth: 200,
         modifier: 1,
         slideShadows: false,
@@ -73,11 +73,11 @@ const Vertical3DCarousel: React.FC<{
               <Image src={copperIndustryPicture} fill alt="cement industry picture" />
             </div>
           </SwiperSlide>
-          <SwiperSlide className="vertical-swiper-slide swiper-container flex flex-col justify-center items-center">
+          {/* <SwiperSlide className="vertical-swiper-slide swiper-container flex flex-col justify-center items-center">
             <div className="carousel-item">
               <Image src={oilIndustryPicture} fill alt="cement industry picture" />
             </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide className="vertical-swiper-slide swiper-container flex flex-col justify-center items-center">
             <div className="carousel-item">
               <Image src={relatedIndustryPicture} fill alt="cement industry picture" />

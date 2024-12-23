@@ -233,16 +233,15 @@ export default function DrawerAppBar() {
                     open={Boolean(anchorEl) && menu === 'catalog'}
                     onClose={MenuHandleClose}
                     MenuListProps={{ 'aria-labelledby': 'catalog-button' }}>
-                    <NavbarMenuItem onClick={MenuHandleClose}>?</NavbarMenuItem>
-                    <NavbarMenuItem onClick={MenuHandleClose}>?</NavbarMenuItem>
-                    <NavbarMenuItem onClick={MenuHandleClose}>?</NavbarMenuItem>
+                    <NavbarMenuItem onClick={MenuHandleClose}>کاتالوگ گلوله ها</NavbarMenuItem>
+                    <NavbarMenuItem onClick={MenuHandleClose}>کاتالوگ کلی</NavbarMenuItem>
                   </NavbarMenu>
                 </div>
-                <div>
+                {/* <div>
                   <Button className='text-xl flex flex-row gap-1 sf_bold' sx={{ color: '#000000' }}>
                     اخبار
                   </Button>
-                </div>
+                </div> */}
               </div>
               <div>
                 <Button

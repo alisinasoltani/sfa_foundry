@@ -204,6 +204,10 @@
   will-change: transform; /* Optimize rendering */
 }
 
+.carousel-item {
+  cursor: pointer;
+}
+
 .vertical-carousel-item {
   background: none;
   border-radius: 30px !important;
