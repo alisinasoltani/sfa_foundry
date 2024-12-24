@@ -276,3 +276,7 @@
 .industries-menu-item:hover::after {
   --_width: 1;
 }
+
+.css-130f8nx {
+  display: flex !important;
+}
