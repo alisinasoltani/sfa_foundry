@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
 import AppBar, { AppBarProps } from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -43,6 +43,30 @@ const LightAppBar = styled(AppBar)<AppBarProps>(({ theme }) => ({
 
 export default function DrawerAppBar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        setIsHidden(true);
+      } else {
+        // Scrolling up
+        setIsHidden(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -80,7 +104,8 @@ export default function DrawerAppBar() {
   return (
     <Box sx={{ display: 'flex', direction: 'rtl' }}>
       <CssBaseline />
-      <LightAppBar component="nav" className='w-full flex flex-row justify-center items-center backdrop-blur-sm bg-[rgba(255,255,255,0.6)] text-black py-4 z-[200]'>
+      <LightAppBar component="nav" className={`w-full flex flex-row justify-center items-center backdrop-blur-sm bg-[rgba(255,255,255,0.6)] text-black py-4 z-[200] header ${isHidden ? 'hidden' : ''}`}
+      style={{transition: 'all 1000ms ease'}}>
         <Toolbar className='w-full flex flex-row justify-between items-center gap-8'>
           <Button
             variant='outlined'
