@@ -10,42 +10,31 @@ const Motto = () => {
         triggerOnce: true,
     });
     return (
-    <Box className="flex flex-col justify-center items-center py-[8rem] z-1">
-        <Typography variant="h4" component="h6" className="sf_semi max-w-[50vw] text-center">
-        بیش از ۴۰سال سابقه و تجربه در زمینه ریخته گری در راه خود کفایی با بهره گیری از نیروهای متخصص و جوان و مدیران مجرب
-        </Typography>
-        <Box ref={ref} className="flex flex-row-reverse justify-center items-start gap-8 pt-[4rem]">
-            <div className="text-center flex flex-col">
-                <span className="flex flex-row-reverse justify-center items-end">
-                    {inView ? <CountUp className="lg:text-[60px] text-[33px] text-[#DA0001]" end={35} duration={4} /> : 0}
-                </span>
-                <h6 className="max-w-[15rem] text-xl sf_bold">
-                    سال تجربه در ریخته گری قطعات صنایع مختلف
-                </h6>
-            </div>
-            <div className="text-center flex flex-col">
-                <span className="flex flex-row-reverse justify-center items-end gap-2">
-                    {inView ? <CountUp className="lg:text-[60px] text-[33px] text-[#DA0001]" end={25000} duration={4} /> : 0}
-                    <span className="text-[2.5rem] sf_semi">
-                        تن
-                    </span>
-                </span>
-                <h6 className="text-xl sf_bold">
-                    ظرفیت اسمی تولید سالانه
-                </h6>
-            </div>
-            <div className="text-center flex flex-col">
-                <span className="flex flex-row-reverse justify-center items-end gap-2">
-                    {inView ? <CountUp className="lg:text-[60px] text-[33px] text-[#DA0001]" end={400} duration={4} /> : 0}
-                    <span className="text-[2.5rem] sf_semi">
-                        نفر
-                    </span>
-                </span>
-                <h6 className="text-xl sf_bold">
-                    پرسنل متخصص و تکنسین فنی
-                </h6>
-            </div>
-        </Box>
+    <Box className="flex flex-row-reverse justify-evenly items-stretch py-[8rem] z-1">
+        <div className="flex flex-col justify-start items-center gap-4 bg-[#ededed] py-10 px-6 rounded-3xl shadow-lg" ref={ref}>
+            <span className="flex flex-row-reverse justify-center items-end gap-2 lg:text-[40px] text-[20px]">
+                <span>+</span> {inView ? <CountUp className="text-[#DA0001]" end={35} duration={4} /> : 0} <span className="sf_bold">سال</span>
+            </span>
+            <span className="flex flex-row-reverse h-full justify-center items-center gap-2 text-center lg:text-[16px] text-[10px] sf_light max-w-[16rem]" style={{ direction: 'rtl' }}>
+                شرکت صنایع ریخته گری سپاهان فولاد آتشگاه در سال 1368 با هدف ریخته گری انواع فولادها و چدن ها تاسیس گردید که با اتکا به توانایی های خود و با پشتوانه سرمایه سازمانی و رویکرد راهبردی مدیریت در حفظ و توسعه این سرمایه ها در زمینه های دانش فنی و تجاری موفقیت های بسیاری کسب کرده است.
+            </span>
+        </div>
+        <div className="flex flex-col justify-start items-center gap-4 bg-[#ededed] py-10 px-6 rounded-3xl shadow-lg">
+            <span className="flex flex-row-reverse justify-center items-end gap-2 lg:text-[40px] text-[20px]">
+                <span>+</span> {inView ? <CountUp className="text-[#DA0001]" end={25000} duration={4} /> : 0} <span className="sf_bold">تن</span>
+            </span>
+            <span className="flex flex-row-reverse h-full justify-center items-center gap-2 text-center lg:text-[16px] text-[10px] sf_light max-w-[16rem]" style={{ direction: 'rtl' }}>
+                شرکت صنایع ریخته گری سپاهان فولاد آتشگاه با در اختیار داشتن 10 عدد کوره با مجموع ذوب همزمان 20 هزار کیلوگرم در فضایی به مساحت 25 هزار متر مربع، ظرفیت تولید سالانه 25 هزار تن قطعه ریخته گری را دارد.
+            </span>
+        </div>
+        <div className="flex flex-col justify-start items-center gap-4 bg-[#ededed] py-10 px-6 rounded-3xl shadow-lg">
+            <span className="flex flex-row-reverse h-full justify-center items-center gap-2 lg:text-[40px] text-[20px]">
+                <span>+</span> {inView ? <CountUp className="text-[#DA0001]" end={400} duration={4} /> : 0} <span className="sf_bold">نفر</span>
+            </span>
+            <span className="flex flex-row-reverse justify-center items-end gap-2 text-center lg:text-[16px] text-[10px] sf_light max-w-[16rem]" style={{ direction: 'rtl' }}>
+                شرکت صنایع ریخته گری سپاهان فولاد آتشگاه به منظور بهبود مستمر و ارتقاء محصولات، جهت کسب رضایت هرچه بیشتر مشتریان از بیش از 300 نیروی متخصص و جوان و همچنین تجهیزات و دانش فنی روز بهره گرفته و تا بحال توانسته است با بسیاری از شرکت های معتبر داخلی و خارجی در زمینه تولید انواع قطعات مصرفی در صنایع مختلف همچون معدن، فولاد، سیمان و مس همکاری نماید.
+            </span>
+        </div>
     </Box>
     );
 }
