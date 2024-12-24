@@ -37,6 +37,7 @@ const NavbarMenuItem = styled(MenuItem)<MenuItemProps>(({ theme }) => ({
 const LightAppBar = styled(AppBar)<AppBarProps>(({ theme }) => ({
   fontFamily: "sf_semi",
   backgroundColor: "rgba(255,255,255,0.6)",
+  fontSize: '1rem',
   backdropFilter: "blur(4px)"
 }));
 
@@ -90,18 +91,18 @@ export default function DrawerAppBar() {
           </Button>
           <Image src={logo} width={200} alt="sfa logo" />
           <Box className="w-full flex flex-col gap-2 justify-center items-center self-end">
-            <Box className="w-full flex flex-row justify-start items-center gap-4">
+            {/* <Box className="w-full flex flex-row justify-start items-center gap-4">
               <div className='w-[6rem] h-[2.5rem] rounded-lg bg-slate-50'></div>
               <div className='w-[6rem] h-[2.5rem] rounded-lg bg-slate-50'></div>
               <div className='w-[6rem] h-[2.5rem] rounded-lg bg-slate-50'></div>
               <div className='w-[6rem] h-[2.5rem] rounded-lg bg-slate-50'></div>
-            </Box>
+            </Box> */}
             <Box className="w-full flex flex-row justify-between items-center gap-4"
             sx={{ display: { xs: 'none', sm: 'block' } }}>
               <div className='flex flex-row justify-start items-center gap-4'>
                 <div>
                   <Button
-                    className='appbar-btn text-xl flex flex-row gap-1 sf_bold'
+                    className='appbar-btn flex flex-row gap-1 sf_bold'
                     id="company-button"
                     aria-controls={MenuOpen ? 'company-menu' : undefined}
                     aria-haspopup="true"
@@ -130,7 +131,7 @@ export default function DrawerAppBar() {
                 </div>
                 <div>
                   <Button
-                  className='appbar-btn text-xl flex flex-row gap-1 sf_bold'
+                  className='appbar-btn flex flex-row gap-1 sf_bold'
                   id="commitment-button"
                   aria-controls={MenuOpen ? 'commitment-menu' : undefined}
                   aria-haspopup="true"
@@ -159,7 +160,7 @@ export default function DrawerAppBar() {
                 </div>
                 <div>
                   <Button
-                  className='appbar-btn text-xl flex flex-row gap-1 sf_bold'
+                  className='appbar-btn flex flex-row gap-1 sf_bold'
                   id="products-button"
                   aria-controls={MenuOpen ? 'products-menu' : undefined}
                   aria-haspopup="true"
@@ -194,7 +195,7 @@ export default function DrawerAppBar() {
                 </div>
                 <div>
                   <Button
-                  className='appbar-btn text-xl flex flex-row gap-1 sf_bold'
+                  className='appbar-btn flex flex-row gap-1 sf_bold'
                   id="innovation-button"
                   aria-controls={MenuOpen ? 'innovation-menu' : undefined}
                   aria-haspopup="true"
@@ -217,7 +218,7 @@ export default function DrawerAppBar() {
                 </div>
                 <div>
                   <Button
-                  className='appbar-btn text-xl flex flex-row gap-1 sf_bold'
+                  className='appbar-btn flex flex-row gap-1 sf_bold'
                   id="catalog-button"
                   aria-controls={MenuOpen ? 'catalog-menu' : undefined}
                   aria-haspopup="true"
@@ -245,7 +246,7 @@ export default function DrawerAppBar() {
               </div>
               <div>
                 <Button
-                  className='text-xl flex flex-row gap-1 sf_bold'
+                  className='flex flex-row gap-1 sf_bold'
                   id="language-button"
                   aria-controls={MenuOpen ? 'language-menu' : undefined}
                   aria-haspopup="true"
