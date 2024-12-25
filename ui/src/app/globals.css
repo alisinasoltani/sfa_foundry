@@ -224,7 +224,7 @@
 
 .industries-menu-container {
   display: flex;
-  --_gap: 3.1rem;
+  --_gap: 4.1rem;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
@@ -273,6 +273,12 @@
   translate 500ms var(--_translate-delay, 0);
 }
 
+.active {
+  /* scale: 1 1 !important; */
+  --_width: 1;
+  color: #D52927;
+}
+
 .industries-menu-item:hover::after {
   --_width: 1;
 }
@@ -287,8 +293,8 @@
 
 .header {
   transform: translateY(0);
-  transition: all 1000ms ease !important;
-  -webkit-transition: all 1000ms ease !important;
+  transition: transform 300ms ease !important;
+  -webkit-transition: transform 300ms ease !important;
 }
 /* .header.visible {
   visibility: visible;
