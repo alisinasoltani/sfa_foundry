@@ -1,6 +1,7 @@
-import { Button } from "@mui/material";
+import { Button, ButtonProps } from "@mui/material";
 import readMore from "@/public/icons/readMore.svg";
 import Image from "next/image";
+import { styled } from '@mui/material/styles';
 
 interface news {
     title: string
@@ -8,6 +9,11 @@ interface news {
     date: string | null
     description: string
 };
+
+const CutsomButton = styled(Button)<ButtonProps>(({ theme }) => ({
+    color: '#DA0001',
+    fontSize: "1.25rem",
+}));
 
 const News = ({ title, subtitle, description }: news) => {
   return (
@@ -20,10 +26,10 @@ const News = ({ title, subtitle, description }: news) => {
         </h4>
         <span className="pt-4 sf_light text-2xl">
             { description }
-            <Button className="text-[#DA0001] text-xl sf_bold inline-flex flex-row gap-2" variant="text" sx={{ color: 'DA0001' }}>
+            <CutsomButton className="text-[#DA0001] text-xl sf_bold inline-flex flex-row gap-2" variant="text" sx={{ color: 'DA0001', fontSize: "1.25rem" }}>
                 مطالعه بیشتر
                 <Image src={readMore} width={25} alt="read more about this news" />
-            </Button>
+            </CutsomButton>
         </span>
     </div>
   );

@@ -25,4 +25,4 @@ const IndustriesMenu = ({ active, handleSlideChange }: IndustriesMenuInterface) 
   )
 }
 
-export default IndustriesMenu
+export default IndustriesMenu;

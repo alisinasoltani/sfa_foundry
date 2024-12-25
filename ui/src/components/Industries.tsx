@@ -50,7 +50,7 @@ export default function BasicTabs() {
           //   disableOnInteraction: true,
           // }}
           onSwiper={(swiper) => (industriesSwiperRef.current = swiper)}
-          onSlideChange={onSlideChange}
+          // onSlideChange={onSlideChange}
           centeredSlides={true}
           slidesPerView={1}
           allowTouchMove={true}
