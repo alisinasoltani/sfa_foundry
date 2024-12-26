@@ -36,7 +36,7 @@ export default function BasicTabs() {
     isProgrammaticChange.current = false; // Reset the flag
   };
   return (
-    <Box sx={{ width: '100%', paddingInline: '4rem' }} className="pt-[5rem] w-full h-[100vh]">
+    <Box sx={{ width: '100%', paddingInline: '4rem' }} className="hidden pt-[5rem] w-full h-[100vh]">
       <div>
         <IndustriesMenu handleSlideChange={handleSlideChange} active={activeInd} />
         <Swiper
