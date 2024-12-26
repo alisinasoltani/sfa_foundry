@@ -17,7 +17,7 @@ const CutsomButton = styled(Button)<ButtonProps>(({ theme }) => ({
 
 const News = ({ title, subtitle, description }: news) => {
   return (
-    <div className="flex flex-col gap-2 justify-center items-start px-6 w-[60vw] bg-none" style={{ direction: 'rtl' }}>
+    <div className="flex flex-col gap-2 justify-center items-start pr-12 w-[58vw] bg-none" style={{ direction: 'rtl' }}>
         <h3 className="sf_bold text-2xl">
             { title }
         </h3>

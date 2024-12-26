@@ -25,6 +25,7 @@ const LinkedSwipers = () => {
         style={{ height: '40vh' }}
         spaceBetween={10}
         centeredSlides={true}
+        centeredSlidesBounds={true}
         onSwiper={(swiper) => (swiper1Ref.current = swiper)}
         onSlideChange={(swiper) => handleSlideChange(swiper, swiper2Ref)}
         slidesPerView={1}>
