@@ -55,8 +55,8 @@ const LinkedSwipers = () => {
         </SwiperSlide>
       </Swiper>
       <Swiper
-        className="news-slider w-[100vw] felx flex-row justify-center items-center right-[10vw] rounded-3xl overflow-hidden"
-        style={{ height: '60vh', width: '80vw' }}
+        className="news-slider w-[100vw] felx flex-row justify-center items-center right-[30vw] rounded-3xl overflow-hidden"
+        style={{ height: '60vh', width: '120vw' }}
         onSwiper={(swiper) => (swiper2Ref.current = swiper)}
         onSlideChange={(swiper) => handleSlideChange(swiper, swiper1Ref)}
         slidesPerView={3}

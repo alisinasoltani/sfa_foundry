@@ -188,11 +188,10 @@
   position: relative;
   width: 40vw;
   height: 55vh;
-  perspective: 1000px; /* Adds 3D perspective */
+  /* perspective: 1000px; Adds 3D perspective */
 }
 
 .news-slider {
-
   perspective: 1000px; /* Adds 3D perspective */
 }
 
