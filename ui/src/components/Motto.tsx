@@ -21,7 +21,7 @@ const Motto = () => {
         </div>
         <div className="flex flex-col justify-start items-center gap-4 bg-[#ededed] py-10 px-[4rem] rounded-3xl shadow-lg">
             <span className="flex flex-row-reverse justify-center items-end gap-2 lg:text-[40px] text-[20px]">
-                <span>+</span>{inView ? <CountUp className="text-[#DA0001]" end={25000} duration={4} /> : 0} <span className="sf_bold">تن</span>
+                <span>+</span>{inView ? <CountUp className="text-[#DA0001]" end={20000} duration={4} /> : 0} <span className="sf_bold">تن</span>
             </span>
             <span className="flex flex-row-reverse h-full justify-center items-center gap-1 text-center lg:text-[16px] text-[10px] sf_light max-w-[18rem]" style={{ direction: 'rtl' }}>
                 شرکت صنایع ریخته گری سپاهان فولاد آتشگاه با در اختیار داشتن 10 عدد کوره با مجموع ذوب همزمان 20 هزار کیلوگرم در فضایی به مساحت 25 هزار متر مربع، ظرفیت تولید سالانه 25 هزار تن قطعه ریخته گری را دارد.
@@ -29,7 +29,7 @@ const Motto = () => {
         </div>
         <div className="flex flex-col justify-start items-center gap-4 bg-[#ededed] py-10 px-[4rem] rounded-3xl shadow-lg">
             <span className="flex flex-row-reverse h-full justify-center items-center gap-1 lg:text-[40px] text-[20px]">
-                <span>+</span>{inView ? <CountUp className="text-[#DA0001]" end={400} duration={4} /> : 0} <span className="sf_bold">نفر</span>
+                <span>+</span>{inView ? <CountUp className="text-[#DA0001]" end={300} duration={4} /> : 0} <span className="sf_bold">نفر</span>
             </span>
             <span className="flex flex-row-reverse justify-center items-end gap-2 text-center lg:text-[16px] text-[10px] sf_light max-w-[18rem]" style={{ direction: 'rtl' }}>
                 شرکت صنایع ریخته گری سپاهان فولاد آتشگاه به منظور بهبود مستمر و ارتقاء محصولات، جهت کسب رضایت هرچه بیشتر مشتریان از بیش از 300 نیروی متخصص و جوان و همچنین تجهیزات و دانش فنی روز بهره گرفته و تا بحال توانسته است با بسیاری از شرکت های معتبر داخلی و خارجی در زمینه تولید انواع قطعات مصرفی در صنایع مختلف همچون معدن، فولاد، سیمان و مس همکاری نماید.
