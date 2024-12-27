@@ -402,7 +402,7 @@ export default function DrawerAppBar() {
             </Box>
           </Box>
           <div>
-            <Image src={logo} width={200} alt="sfa logo" />
+            <Image src={logo} className='navbar-logo' alt="sfa logo" />
           </div>
         </Toolbar>
       </LightAppBar>
