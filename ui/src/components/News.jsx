@@ -19,35 +19,33 @@ const LinkedSwipers = () => {
   };
 
   return (
-    <div className="w-full px-[20vw] pt-[8rem] overflow-hidden">
+    <div className="w-full xl:px-[20vw] py-[8rem] overflow-hidden">
       <Swiper
-        className="h-[40vh]"
-        style={{ height: '40vh' }}
+        className="news-text-slider"
         spaceBetween={10}
         centeredSlides={true}
-        centeredSlidesBounds={true}
         onSwiper={(swiper) => (swiper1Ref.current = swiper)}
         onSlideChange={(swiper) => handleSlideChange(swiper, swiper2Ref)}
         slidesPerView={1}>
-        <SwiperSlide>
+        <SwiperSlide className="news-text-item">
           <News title={"عملیات حرارتی گلوله های ریخته گری"}
           subtitle={"رسیدن به نرخ سایش و سختی مناسب"}
           description={"از شاخص های مهم گلوله های  این شرکت، نرخ سایش آنها بوده که که مشخص کننده سرعت مصرف آنها در فرایند است که کنترل آن به کاهش هزینه های تولید و ارتقاء بهروری مشتریان کمک شایانی میکند. این شرکت با به کار گیری روش های مدرن ریخته‌گری و عملیات حرارتی و افزایش سختی گلوله ها، تلاش مستمر برای کاهش نرخ سایش و اقتصادی کردن فرایند تولید مشتریان را دارد..."}
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="news-text-item">
           <News title={"پیشرو در تولید تخصصی محصولات ریخته‌گری"}
           subtitle={"در حوزه صنایع مس، سیمان، معادن، فولاد و آهن"}
           description={"مجموعه ما با تخصص در ریخته‌گری چدن و فولاد محصولات متنوعی را برای صنایع مس، سیمان، معادن، فولاد و آهن تولید میکند.تمامی محصولات با استفاده از مواد اولیه با کیفیت و فناوری های پیشرفته، مطابق با نیاز های صنعتی طراحی و عرضه میشود..."}
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="news-text-item">
           <News title={"عملیات حرارتی گلوله های ریخته گری"}
           subtitle={"رسیدن به نرخ سایش و سختی مناسب"}
           description={"از شاخص های مهم گلوله های  این شرکت، نرخ سایش آنها بوده که که مشخص کننده سرعت مصرف آنها در فرایند است که کنترل آن به کاهش هزینه های تولید و ارتقاء بهروری مشتریان کمک شایانی میکند. این شرکت با به کار گیری روش های مدرن ریخته‌گری و عملیات حرارتی و افزایش سختی گلوله ها، تلاش مستمر برای کاهش نرخ سایش و اقتصادی کردن فرایند تولید مشتریان را دارد..."}
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="news-text-item">
           <News title={"پیشرو در تولید تخصصی محصولات ریخته‌گری"}
           subtitle={"در حوزه صنایع مس، سیمان، معادن، فولاد و آهن"}
           description={"مجموعه ما با تخصص در ریخته‌گری چدن و فولاد محصولات متنوعی را برای صنایع مس، سیمان، معادن، فولاد و آهن تولید میکند.تمامی محصولات با استفاده از مواد اولیه با کیفیت و فناوری های پیشرفته، مطابق با نیاز های صنعتی طراحی و عرضه میشود..."}
@@ -55,14 +53,23 @@ const LinkedSwipers = () => {
         </SwiperSlide>
       </Swiper>
       <Swiper
-        className="news-slider w-[100vw] felx flex-row justify-center items-center right-[30vw] rounded-3xl overflow-hidden"
-        style={{ height: '60vh', width: '120vw' }}
+        className="news-slider xl:w-[100vw] mt-2 felx flex-row justify-center items-center xl:right-[20vw] rounded-3xl overflow-hidden"
         onSwiper={(swiper) => (swiper2Ref.current = swiper)}
         onSlideChange={(swiper) => handleSlideChange(swiper, swiper1Ref)}
-        slidesPerView={3}
         spaceBetween={0}
         loop={true}
         centeredSlides={true}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 1,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
         modules={[EffectCoverflow]}
         effect="coverflow"
         coverflowEffect={{
@@ -72,16 +79,16 @@ const LinkedSwipers = () => {
           modifier: 1,
           slideShadows: true,
         }}>
-        <SwiperSlide className="felx flex-row justify-center items-center" style={{ width: '35vw', aspectRatio: 'auto 3/2' }}>
+        <SwiperSlide className="felx flex-row justify-center items-center">
           <Image src={newsPicture1} fill alt="news picture" />
         </SwiperSlide>
-        <SwiperSlide className="felx flex-row justify-center items-center w-[55vw]" style={{ width: '35vw', aspectRatio: 'auto 3/4' }}>
+        <SwiperSlide className="felx flex-row justify-center items-center">
           <Image src={newsPicture2} fill alt="news picture" />
         </SwiperSlide>
-        <SwiperSlide className="felx flex-row justify-center items-center w-[55vw]" style={{ width: '35vw', aspectRatio: 'auto 3/4' }}>
+        <SwiperSlide className="felx flex-row justify-center items-center">
           <Image src={newsPicture1} fill alt="news picture" />
         </SwiperSlide>
-        <SwiperSlide className="felx flex-row justify-center items-center w-[55vw]" style={{ width: '35vw', aspectRatio: 'auto 3/4' }}>
+        <SwiperSlide className="felx flex-row justify-center items-center">
           <Image src={newsPicture2} fill alt="news picture" />
         </SwiperSlide>
       </Swiper>

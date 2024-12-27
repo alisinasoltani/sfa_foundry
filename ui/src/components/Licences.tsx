@@ -9,7 +9,7 @@ const Licences = () => {
   return (
     <>
       <div className="w-full relative bg-[#FDFDFD] -translate-y-10 z-0 flex flex-col xl:gap-12 gap-6 pt-12 justify-center items-center xl:h-[100vh] lg:h-[80vh] h-[150vh]">
-          <div className="xl:flex lg:flex hidden z-10 absolute top-4 left-0 p-0 m-0 w-full h-[100vh]">
+          <div className="xl:flex hidden z-10 absolute top-4 left-0 p-0 m-0 w-full h-[100vh]">
             <Image src={waves} height={600} alt="" />
           </div>
           <div className="z-0 absolute xl:top-[48vh] lg:top-[40vh] top-[110vh] left-0 p-0 m-0 overflow-hidden w-full xl:h-[130vh] lg:h-[100vh] h-[50vh]">

@@ -2,6 +2,7 @@ import { Button, ButtonProps } from "@mui/material";
 import readMore from "@/public/icons/readMore.svg";
 import Image from "next/image";
 import { styled } from '@mui/material/styles';
+import readMoreIcon from "@/public/icons/readMoreIcon.svg";
 
 interface news {
     title: string
@@ -17,18 +18,18 @@ const CutsomButton = styled(Button)<ButtonProps>(({ theme }) => ({
 
 const News = ({ title, subtitle, description }: news) => {
   return (
-    <div className="flex flex-col gap-2 justify-center items-start pr-12 w-[58vw] bg-none" style={{ direction: 'rtl' }}>
-        <h3 className="sf_bold text-2xl">
+    <div className="news-container cursor-pointer flex flex-col lg:gap-2 justify-center items-start pr-12 w-[58vw] bg-none" style={{ direction: 'rtl' }}>
+        <h3 className="news-title sf_bold lg:text-2xl">
             { title }
         </h3>
-        <h4 className="sf_semi text-2xl">
+        <h4 className="news-subtitle sf_semi lg:text-2xl">
             { subtitle }
         </h4>
-        <span className="pt-4 sf_light text-2xl">
+        <span className="news-description pt-4 sf_light lg:text-2xl">
             { description }
-            <CutsomButton className="text-[#DA0001] text-xl sf_bold inline-flex flex-row gap-2" variant="text" sx={{ color: 'DA0001', fontSize: "1.25rem" }}>
+            <CutsomButton className="text-white rounded-2xl lg:text-xl mt-4 text-base sf_medium flex flex-row gap-2" variant="contained" color="secondary" sx={{ fontSize: "1.25rem" }}>
                 مطالعه بیشتر
-                <Image src={readMore} width={25} alt="read more about this news" />
+                <Image src={readMoreIcon} width={20} alt="read more about this news" />
             </CutsomButton>
         </span>
     </div>

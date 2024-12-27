@@ -1,6 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media only screen and (max-width: 640px) {
+  .news-slider {
+    height: calc(90vw * 2/3) !important;
+    width: 90vw !important;
+  }
+  .news-text-slider {
+    height: 50vh !important;
+    width: 90vw !important;
+  }
+  .news-text-slider div {
+    height: 50vh !important;
+    width: 90vw !important;
+  }
+  .news-title {
+    font-size: 1.2rem;
+  }
+  .news-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .news-slider {
+    height: calc(90vw * 2/3) !important;
+    width: 90vw !important;
+  }
+  .news-text-slider {
+    height: 50vh !important;
+    width: 90vw !important;
+  }
+  .news-text-slider div {
+    height: 50vh !important;
+    width: 90vw !important;
+  }
+  .news-title {
+    font-size: 2rem;
+  }
+  .news-subtitle {
+    font-size: 2.5rem;
+  }
+  .news-description {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .news-slider {
+    height: calc(90vw * 2/3) !important;
+    width: 90vw;
+  }
+  .news-text-slider {
+    margin-inline: 20vw !important;
+  }
+}
+.news-text-item {
+  width: 100%;
+  height: 50vh !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* width: 90vw !important; */
+}
 @font-face {
   font-family: 'sf_light';
   src: url("./fonts/SFArabic-Light.ttf");
@@ -18,11 +82,6 @@
   src: url("./fonts/SFArabic-Medium.ttf");
 }
 
-.swiper {
-  /* width: 100vw; */
-  height: 100vh;
-  z-index: 0;
-}
 .swiper-button-next, .swiper-button-prev {
   color: #ffffff !important;
   width: 2.8rem !important;

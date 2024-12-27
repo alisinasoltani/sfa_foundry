@@ -34,7 +34,7 @@ export default function Home() {
       <DrawerAppBar />
       <Slider />
       <Motto />
-      <div className="py-[4rem] w-100 bg-[#16163C] text-white items-center relative z-[10] rounded-[2rem]">
+      <div className="py-[4rem] w-100 bg-[#16163C] text-white items-center z-[10] rounded-[2rem]">
         <BasicTabs />
         <LinkedSwipers />
       </div>
