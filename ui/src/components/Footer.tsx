@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-12 justify-center items-start bg-none lg:pt-[12vh] w-full xl:h-[60vh] lg:h-[70vh] h-[140vh] relative z-[100]">
         <div className="flex flex-col justify-center items-center lg:gap-4 gap-8 w-full xl:px-[4rem] px-[2rem]">
-            <h2 className="lg:text-3xl text-2xl sf_bold border-b-2 border-[#D52927] pb-3 text-center xl:w-[22vw] w-full" style={{ direction: 'rtl' }}>
+            <h2 className="lg:text-3xl text-2xl sf_bold border-b-2 border-[#D52927] pb-3 text-center w-full" style={{ direction: 'rtl' }}>
                 ارتباط با ما
             </h2>
             <div className="flex flex-row justify-center items-center xl:gap-12 gap-10 xl:w-[22vw] w-full">
@@ -53,7 +53,7 @@ const Footer = () => {
             </div>
         </div>
         <div className="flex flex-col justify-center items-end gap-4 w-full px-[2rem]">
-            <h2 className="lg:text-3xl text-2xl sf_bold border-b-2 border-[#D52927] pb-3 text-center xl:w-[22vw] w-full" style={{ direction: 'rtl' }}>
+            <h2 className="lg:text-3xl text-2xl sf_bold border-b-2 border-[#D52927] pb-3 text-center w-full" style={{ direction: 'rtl' }}>
                 تماس با ما
             </h2>
             <div className="flex flex-row justify-end gap-2 lg:text-3xl text-2xl sf_light">
@@ -79,8 +79,8 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        <div className="flex flex-col justify-center items-end gap-4 w-full lg:w-[28vw] px-[2rem]">
-            <h2 className="lg:text-3xl text-2xl sf_bold border-b-2 border-[#D52927] pb-3 text-center xl:w-[22vw] w-full" style={{ direction: 'rtl' }}>
+        <div className="flex flex-col justify-center items-end gap-4 w-full px-[2rem]">
+            <h2 className="lg:text-3xl text-2xl sf_bold border-b-2 border-[#D52927] pb-3 text-center w-full" style={{ direction: 'rtl' }}>
                 آدرس ما
             </h2>
             <h5 className="xl:text-3xl text-2xl sf_medium lg:w-[18vw] w-full" style={{ direction: 'rtl', lineHeight: '2.4rem' }}>
