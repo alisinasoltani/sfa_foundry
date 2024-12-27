@@ -2,7 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 850px) {
+  .toolbar-item {
+    display: none;
+  }
+  .toolbar {
+    display: none;
+  }
+  .mobile-menu-button {
+    display: block !important;
+  }
+
   .news-slider {
     height: calc(90vw * 2/3) !important;
     width: 90vw !important;
@@ -23,7 +33,10 @@
   }
 }
 
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 851px) {
+  .mobile-menu-button {
+    display: none !important;
+  }
   .news-slider {
     height: calc(90vw * 2/3) !important;
     width: 90vw !important;

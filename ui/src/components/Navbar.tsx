@@ -21,6 +21,11 @@ import arrowLeft from "@/public/icons/arrowLeft.svg";
 import englishLang from "@/public/icons/englishLang.svg";
 import arrowDown from "@/public/icons/arrowDown.svg";
 import Image from 'next/image';
+import menuIcon from "@/public/icons/menuIcon.svg";
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const drawerWidth = 240;
 
@@ -86,18 +91,120 @@ export default function DrawerAppBar() {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
+    <Box sx={{ textAlign: 'center' }}>
+      <div className='w-full flex flex-row justify-center items-center py-4'>
+        <Image src={logo} width={180} alt="sfa logo" />
+      </div>
       <Divider />
-      <List>
-          <ListItem disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={"??"} />
-            </ListItemButton>
-          </ListItem>
-      </List>
+      <Accordion sx={{ direction: 'rtl' }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header">
+          <Typography component="span" sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1.2rem' }}>
+            شرکت
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            درباره ما
+          </Button>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            تماس با ما
+          </Button>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            همکاری با ما
+          </Button>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion sx={{ direction: 'rtl' }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header">
+          <Typography component="span" sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1.2rem' }}>
+            تعهد
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            بررسی اجمالی
+          </Button>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            تنوع
+          </Button>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            کنترل کیفی
+          </Button>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion sx={{ direction: 'rtl' }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header">
+          <Typography component="span" sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1.2rem' }}>
+            تولیدات
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            صنایع آهن و فولاد
+          </Button>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            معادن و صنایع وابسته
+          </Button>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            صنعت سیمان
+          </Button>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            صنعت مس
+          </Button>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            گلوله چدنی
+          </Button>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion sx={{ direction: 'rtl' }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header">
+          <Typography component="span" sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1.2rem' }}>
+            نوآوری
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            ؟
+          </Button>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            ؟
+          </Button>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            ؟
+          </Button>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion sx={{ direction: 'rtl' }}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header">
+          <Image src={englishLang} alt="english language" />
+        </AccordionSummary>
+        <AccordionDetails>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            ؟
+          </Button>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            ؟
+          </Button>
+          <Button className='w-full flex flex-row justify-start' sx={{ color: 'black', fontFamily: 'sf_semi', fontSize: '1rem' }} onClick={MenuHandleClose}>
+            ؟
+          </Button>
+        </AccordionDetails>
+      </Accordion>
     </Box>
   );
 
@@ -106,16 +213,16 @@ export default function DrawerAppBar() {
       <CssBaseline />
       <LightAppBar component="nav" className={`w-full flex flex-row justify-center items-center backdrop-blur-sm bg-[rgba(255,255,255,0.6)] text-black py-4 z-[200] header ${isHidden ? 'hidden' : ''}`}
       style={{transition: 'all 1000ms ease'}}>
-        <Toolbar className='w-full flex flex-row justify-between items-center gap-8'>
+        <Toolbar className='w-full flex flex-row-reverse justify-between items-center gap-8'>
           <Button
             variant='outlined'
+            color='error'
             aria-label="open drawer"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' }, color: 'black' }}>
-            Open
+            className='mobile-menu-button flex flex-row justify-center pl-3 pr-5 py-3'
+            onClick={handleDrawerToggle}>
+            <Image src={menuIcon} width={25} alt='mobile menu icon: click to open the navbar' />
           </Button>
-          <Image src={logo} width={200} alt="sfa logo" />
-          <Box className="w-full flex flex-col gap-2 justify-center items-center self-end">
+          <Box className="toolbar w-full flex flex-col gap-2 justify-center items-center self-end">
             {/* <Box className="w-full flex flex-row justify-start items-center gap-4">
               <div className='w-[6rem] h-[2.5rem] rounded-lg bg-slate-50'></div>
               <div className='w-[6rem] h-[2.5rem] rounded-lg bg-slate-50'></div>
@@ -125,7 +232,7 @@ export default function DrawerAppBar() {
             <Box className="w-full flex flex-row justify-between items-center gap-4"
             sx={{ display: { xs: 'none', sm: 'block' } }}>
               <div className='flex flex-row justify-start items-center gap-4'>
-                <div>
+                <div className='toolbar-item'>
                   <Button
                     className='appbar-btn flex flex-row gap-1 sf_bold'
                     id="company-button"
@@ -154,7 +261,7 @@ export default function DrawerAppBar() {
                     </NavbarMenuItem>
                   </NavbarMenu>
                 </div>
-                <div>
+                <div className='toolbar-item'>
                   <Button
                   className='appbar-btn flex flex-row gap-1 sf_bold'
                   id="commitment-button"
@@ -183,7 +290,7 @@ export default function DrawerAppBar() {
                     </NavbarMenuItem>
                   </NavbarMenu>
                 </div>
-                <div>
+                <div className='toolbar-item'>
                   <Button
                   className='appbar-btn flex flex-row gap-1 sf_bold'
                   id="products-button"
@@ -218,7 +325,7 @@ export default function DrawerAppBar() {
                     </NavbarMenuItem>
                   </NavbarMenu>
                 </div>
-                <div>
+                <div className='toolbar-item'>
                   <Button
                   className='appbar-btn flex flex-row gap-1 sf_bold'
                   id="innovation-button"
@@ -241,7 +348,7 @@ export default function DrawerAppBar() {
                     <NavbarMenuItem onClick={MenuHandleClose}>?</NavbarMenuItem>
                   </NavbarMenu>
                 </div>
-                <div>
+                <div className='toolbar-item'>
                   <Button
                   className='appbar-btn flex flex-row gap-1 sf_bold'
                   id="catalog-button"
@@ -269,7 +376,7 @@ export default function DrawerAppBar() {
                   </Button>
                 </div> */}
               </div>
-              <div>
+              <div className='toolbar-item'>
                 <Button
                   className='flex flex-row gap-1 sf_bold'
                   id="language-button"
@@ -278,7 +385,7 @@ export default function DrawerAppBar() {
                   aria-expanded={MenuOpen ? 'true' : undefined}
                   sx={{ color: '#000000' }}
                   onClick={(event) => MenuHandleClick(event, 'language')}>
-                  <Image src={englishLang} alt="" />
+                  <Image src={englishLang} alt="english language" />
                   <Image src={arrowDown} alt="" />
                 </Button>
                 <NavbarMenu
@@ -287,13 +394,16 @@ export default function DrawerAppBar() {
                   open={Boolean(anchorEl) && menu === 'language'}
                   onClose={MenuHandleClose}
                   MenuListProps={{ 'aria-labelledby': 'language-button' }}>
-                  <NavbarMenuItem onClick={MenuHandleClose}>Profile</NavbarMenuItem>
-                  <NavbarMenuItem onClick={MenuHandleClose}>My account</NavbarMenuItem>
-                  <NavbarMenuItem onClick={MenuHandleClose}>Logout</NavbarMenuItem>
+                  <NavbarMenuItem onClick={MenuHandleClose}>?</NavbarMenuItem>
+                  <NavbarMenuItem onClick={MenuHandleClose}>?</NavbarMenuItem>
+                  <NavbarMenuItem onClick={MenuHandleClose}>?</NavbarMenuItem>
                 </NavbarMenu>
               </div>
             </Box>
           </Box>
+          <div>
+            <Image src={logo} width={200} alt="sfa logo" />
+          </div>
         </Toolbar>
       </LightAppBar>
       <nav>
