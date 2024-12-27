@@ -15,7 +15,7 @@ const Footer = () => {
             <h2 className="lg:text-3xl text-2xl sf_bold border-b-2 border-[#D52927] pb-3 text-center xl:w-[22vw] w-full" style={{ direction: 'rtl' }}>
                 ارتباط با ما
             </h2>
-            <div className="flex flex-row justify-center items-center xl:gap-12 lg:gap-10 xl:w-[22vw] w-full">
+            <div className="flex flex-row justify-center items-center xl:gap-12 gap-10 xl:w-[22vw] w-full">
                 <Link href={""}>
                     <button type="button" className="bg-[#09162E] p-2 rounded-2xl">
                         <Image src={facebookIcon} width={35} alt="facebook link" />
