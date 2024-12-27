@@ -10,7 +10,7 @@ import mailIcon from "@/public/icons/mail.svg";
 
 const Footer = () => {
   return (
-    <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-12 justify-center items-start lg:pt-[12vh] w-full xl:h-[60vh] lg:h-[80vh] h-[140vh] relative z-[100]">
+    <div className="flex lg:flex-row flex-col-reverse lg:gap-0 gap-12 justify-center items-start bg-none lg:pt-[12vh] w-full xl:h-[60vh] lg:h-[70vh] h-[140vh] relative z-[100]">
         <div className="flex flex-col justify-center items-center lg:gap-4 gap-8 w-full xl:px-[4rem] px-[2rem]">
             <h2 className="lg:text-3xl text-2xl sf_bold border-b-2 border-[#D52927] pb-3 text-center xl:w-[22vw] w-full" style={{ direction: 'rtl' }}>
                 ارتباط با ما
