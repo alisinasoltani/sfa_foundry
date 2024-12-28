@@ -5,7 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import News from "./NewsItem";
 import Image from "next/image";
 import newsPicture1 from "@/public/news/news_pic1.png";
-import newsPicture2 from "@/public/news/news_pic2.png";
+// import newsPicture2 from "@/public/news/news_pic2.png";
+import newsPicture3 from "@/public/news/news_pic3.JPG";
+import newsPicture4 from "@/public/news/news_pic4.JPG";
 import { EffectCoverflow } from "swiper/modules";
 
 const LinkedSwipers = () => {
@@ -21,7 +23,7 @@ const LinkedSwipers = () => {
   return (
     <div className="w-full xl:px-[20vw] py-[8rem] overflow-hidden">
       <Swiper
-        className="news-text-slider"
+        className="news-text-slider xl:right-[16vw]"
         spaceBetween={10}
         centeredSlides={true}
         onSwiper={(swiper) => (swiper1Ref.current = swiper)}
@@ -83,13 +85,13 @@ const LinkedSwipers = () => {
           <Image src={newsPicture1} fill alt="news picture" />
         </SwiperSlide>
         <SwiperSlide className="felx flex-row justify-center items-center">
-          <Image src={newsPicture2} fill alt="news picture" />
+          <Image src={newsPicture3} fill alt="news picture" />
+        </SwiperSlide>
+        <SwiperSlide className="felx flex-row justify-center items-center">
+          <Image src={newsPicture4} fill alt="news picture" />
         </SwiperSlide>
         <SwiperSlide className="felx flex-row justify-center items-center">
           <Image src={newsPicture1} fill alt="news picture" />
-        </SwiperSlide>
-        <SwiperSlide className="felx flex-row justify-center items-center">
-          <Image src={newsPicture2} fill alt="news picture" />
         </SwiperSlide>
       </Swiper>
     </div>

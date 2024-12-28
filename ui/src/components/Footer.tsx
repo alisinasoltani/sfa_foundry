@@ -47,7 +47,7 @@ const Footer = () => {
                 <h6 className="lg:w-[22rem] lg:text-[1.5rem] text-[1.2rem] sf_medium text-center" style={{ direction: 'rtl' }}>
                     کلیه حقوق مادی و معنوی، متعلق به سپاهان فولاد آتشگاه می باشد.
                 </h6>
-                <h6 className="lg:w-[22rem] text-center lg:text-[1.5rem] text-[1.2rem] sf_semi" style={{ direction: 'rtl' }}>
+                <h6 className="lg:w-[22rem] text-center text-[1.2rem] sf_semi" style={{ direction: 'rtl' }}>
                     طراحی شده توسط تیم آکادمی پنج
                 </h6>
             </div>

@@ -1,15 +1,16 @@
 "use client"
 
+import { useEffect, useState } from "react";
 import DrawerAppBar from "@/components/Navbar";
 import Slider from "@/components/Slider";
 import LinkedSwipers from "@/components/News";
-import GrindingMediaBall from "@/components/GrindingMediaBall";
 import BasicTabs from "@/components/Industries";
 import Licences from "@/components/Licences";
 import Motto from "@/components/Motto";
 import Footer from "@/components/Footer";
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from "@mui/material/styles";
+
 
 const theme = createTheme({
   palette: {
@@ -29,18 +30,41 @@ const theme = createTheme({
 });
 
 export default function Home() {
+  const [opacity, setOpacity] = useState(1);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const hardCodedStartDate = new Date("2024-12-28");
+      const today = new Date();
+      const daysElapsed = Math.floor(
+        (today.getTime() - hardCodedStartDate.getTime()) / (1000 * 60 * 60 * 24)
+      );
+      const newOpacity = Math.max(1 - daysElapsed * 0.1, 0);
+      setOpacity(newOpacity);
+      if (newOpacity === 0) {
+        setIsVisible(false);
+      }
+    }
+  }, []);
   return (
-    <ThemeProvider theme={theme}>
-      <DrawerAppBar />
-      <Slider />
-      <Motto />
-      <div className="py-[4rem] w-100 bg-[#16163C] text-white items-center z-[10] rounded-[2rem]">
-        <BasicTabs />
-        <LinkedSwipers />
-      </div>
-      {/* <GrindingMediaBall /> */}
-      <Licences />
-      <Footer />
-    </ThemeProvider>
+    isVisible && (
+      <ThemeProvider theme={theme}>
+        <div style={{ 
+          opacity,
+          transition: "opacity 1s ease",
+         }}>
+          <DrawerAppBar />
+          <Slider />
+          <Motto />
+          <div className="py-[4rem] w-100 bg-[#16163C] text-white items-center z-[10] rounded-[2rem]">
+            <BasicTabs />
+            <LinkedSwipers />
+          </div>
+          <Licences />
+          <Footer />
+        </div>
+      </ThemeProvider>
+    )
   );
 }
