@@ -6,13 +6,9 @@ import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import Button, { ButtonProps } from '@mui/material/Button';
 import Menu, { MenuProps } from '@mui/material/Menu';
 import MenuItem, { MenuItemProps } from '@mui/material/MenuItem';
 import { styled } from '@mui/material/styles';
@@ -45,6 +41,15 @@ const LightAppBar = styled(AppBar)<AppBarProps>(({ theme }) => ({
   fontSize: '1rem',
   backdropFilter: "blur(4px)"
 }));
+
+const MobileMenuButton = styled(Button)({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  paddingLeft: '0.5rem',
+  paddingRight: '1.25rem',
+  paddingBlock: '0.5rem'
+});
 
 export default function DrawerAppBar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -211,17 +216,16 @@ export default function DrawerAppBar() {
   return (
     <Box sx={{ display: 'flex', direction: 'rtl' }}>
       <CssBaseline />
-      <LightAppBar component="nav" className={`w-full flex flex-row justify-center items-center backdrop-blur-sm bg-[rgba(255,255,255,0.6)] text-black py-4 z-[200] header ${isHidden ? 'hidden' : ''}`}
+      <LightAppBar component="nav" className={`navbar w-full flex flex-row justify-center items-center backdrop-blur-sm bg-[rgba(255,255,255,0.6)] text-black z-[200] header ${isHidden ? 'hidden' : ''}`}
       style={{transition: 'all 1000ms ease'}}>
         <Toolbar className='w-full flex flex-row-reverse justify-between items-center gap-8'>
-          <Button
-            variant='outlined'
-            color='error'
+          <MobileMenuButton
+            variant='text'
             aria-label="open drawer"
-            className='mobile-menu-button flex flex-row justify-center pl-3 pr-5 py-3'
+            className='mobile-menu-button'
             onClick={handleDrawerToggle}>
             <Image src={menuIcon} width={25} alt='mobile menu icon: click to open the navbar' />
-          </Button>
+          </MobileMenuButton>
           <Box className="toolbar w-full flex flex-col gap-2 justify-center items-center self-end">
             {/* <Box className="w-full flex flex-row justify-start items-center gap-4">
               <div className='w-[6rem] h-[2.5rem] rounded-lg bg-slate-50'></div>
@@ -409,13 +413,13 @@ export default function DrawerAppBar() {
       <nav>
         <Drawer
           variant="temporary"
+          className='drawer'
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 import slide1 from "@/public/slider/slide1.png"
 import slide2 from "@/public/slider/slide2.jpg"
@@ -14,20 +14,12 @@ import slide7 from "@/public/slider/slide7.jpg"
 import slide8 from "@/public/slider/slide8.jpg"
 import slide9 from "@/public/slider/slide9.jpg"
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
-const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-        return `<span class=" border-2 border-white bg-black ${className}" style="width: 1rem; height: 1rem;"></span>`;
-    },
-};
 
 const Slider = () => {
   return (
