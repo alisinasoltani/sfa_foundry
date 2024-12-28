@@ -88,11 +88,8 @@
     display: none !important;
   }
   .news-slider {
-    height: calc(90vw * 2/3) !important;
-    width: 90vw;
-  }
-  .news-text-slider {
-    margin-inline: 20vw !important;
+    height: 60vh !important;
+    width: 100vw;
   }
 }
 .news-text-item {
