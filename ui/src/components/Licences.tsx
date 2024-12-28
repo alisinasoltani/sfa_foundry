@@ -8,7 +8,7 @@ import licence3 from "@/public/licences/licence3.png";
 const Licences = () => {
   return (
     <>
-      <div className="w-full relative bg-[#FDFDFD] -translate-y-10 z-0 flex flex-col xl:gap-12 gap-6 pt-12 justify-center items-center lg:h-[100vh] md:h-[80vh] h-[120vh]">
+      <div className="w-full relative bg-[#FDFDFD] -translate-y-10 z-0 flex flex-col xl:gap-12 gap-6 pt-12 justify-center items-center lg:h-[100vh] md:h-[80vh] h-[110vh]">
           <div className="xl:flex hidden z-10 absolute top-4 left-0 p-0 m-0 w-full h-[100vh]">
             <Image src={waves} height={600} alt="" />
           </div>

@@ -9,7 +9,7 @@ const Motto = () => {
         triggerOnce: true,
     });
     return (
-    <Box className="flex lg:flex-row-reverse flex-col lg:gap-0 lg:px-0 px-8 gap-12 lg:justify-evenly justify-center lg:items-stretch items-center py-[8rem] z-1">
+    <Box className="flex lg:flex-row-reverse flex-col lg:gap-0 lg:px-0 px-8 gap-[4rem] lg:justify-evenly justify-center lg:items-stretch items-center md:py-[8rem] sm:py-[4rem] z-1">
         <div className="flex flex-col justify-start items-center gap-4 bg-[#ededed] xl:px-[4rem] py-10 px-4 rounded-3xl shadow-lg" ref={ref}>
             <span className="flex flex-row-reverse justify-center items-end gap-2 lg:text-[40px] text-[20px]">
                 <span>+</span>{inView ? <CountUp className="text-[#DA0001]" end={35} duration={4} /> : 0} <span className="sf_bold">سال</span>
