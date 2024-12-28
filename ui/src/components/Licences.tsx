@@ -22,7 +22,7 @@ const Licences = () => {
           شرکت سپاهان فولاد آتشگاه، دارای گواهینامه های ISO 14001:2004 و ISO 9001:2008 است.
           کلیه مراحل تولید در این شرکت طبق دستورالعمل های سیستم کنترل کیفیت انجام می شود.
           </span>
-          <div className="flex lg:flex-row flex-col justify-center items-center lg:gap-10 gap-4 z-10">
+          <div className="flex md:flex-row sm:flex-col justify-center items-center lg:gap-10 gap-4 z-10">
               <Image className="shadow-xl xl:w-[200px] w-[150px]" src={licence1} placeholder="blur" alt="" />
               <Image className="shadow-xl xl:w-[200px] w-[150px]" src={licence2} placeholder="blur" alt="" />
               <Image className="shadow-xl xl:w-[200px] w-[150px]" src={licence3} placeholder="blur" alt="" />
