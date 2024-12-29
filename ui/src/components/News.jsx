@@ -21,7 +21,7 @@ const LinkedSwipers = () => {
   };
 
   return (
-    <div className="w-full px-[20vw] py-[8rem] overflow-hidden">
+    <div className="w-full md:px-[20vw] py-[8rem] overflow-hidden">
       <Swiper
         className="news-text-slider md:right-[16vw] md:left-auto sm:left-[16vw]"
         spaceBetween={10}
