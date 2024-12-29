@@ -23,7 +23,7 @@ const LinkedSwipers = () => {
   return (
     <div className="w-full md:px-[20vw] py-[8rem] overflow-hidden">
       <Swiper
-        className="news-text-slider md:right-[16vw] md:left-auto sm:left-[16vw]"
+        className="news-text-slider md:right-[16vw] md:left-auto sm:left-[4vw]"
         spaceBetween={10}
         centeredSlides={true}
         onSwiper={(swiper) => (swiper1Ref.current = swiper)}
