@@ -12,22 +12,27 @@ interface news {
 };
 
 const CutsomButton = styled(Button)<ButtonProps>(({ theme }) => ({
-    color: '#DA0001',
+    color: '#ffffff',
     fontSize: "1.25rem",
+    borderRadius: '1rem',
+    marginTop: '1rem',
+    display: 'flex',
+    flexDirection: 'row',
+    gap: '0.5rem'
 }));
 
 const News = ({ title, subtitle, description }: news) => {
   return (
     <div className="news-container cursor-pointer flex flex-col lg:gap-2 justify-center items-start pr-12 w-[58vw] bg-none" style={{ direction: 'rtl' }}>
-        <h3 className="news-title sf_bold lg:text-2xl">
+        <h3 className="news-title sf_bold lg:text-2xl sm:text-[0.8rem]">
             { title }
         </h3>
-        <h4 className="news-subtitle sf_semi lg:text-2xl">
+        <h4 className="news-subtitle sf_semi lg:text-2xl sm:text-[1rem]">
             { subtitle }
         </h4>
-        <span className="news-description pt-4 sf_light lg:text-2xl">
+        <span className="news-description pt-4 sf_light lg:text-2xl sm:text-[0.8rem]">
             { description }
-            <CutsomButton className="text-white rounded-2xl lg:text-xl mt-4 text-base sf_medium flex flex-row gap-2" variant="contained" color="secondary" sx={{ fontSize: "1.25rem" }}>
+            <CutsomButton className="lg:text-xl text-base sf_medium" variant="contained" color="secondary" sx={{ fontSize: "1.25rem" }}>
                 مطالعه بیشتر
                 <Image src={readMoreIcon} width={20} alt="read more about this news" />
             </CutsomButton>

@@ -35,7 +35,7 @@ export default function Home() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const hardCodedStartDate = new Date("2024-12-28");
+      const hardCodedStartDate = new Date("2024-12-29");
       const today = new Date();
       const daysElapsed = Math.floor(
         (today.getTime() - hardCodedStartDate.getTime()) / (1000 * 60 * 60 * 24)
