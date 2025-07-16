@@ -33,20 +33,20 @@ export default function Home() {
   const [opacity, setOpacity] = useState(1);
   const [isVisible, setIsVisible] = useState(true);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const hardCodedStartDate = new Date("2024-12-29");
-      const today = new Date();
-      const daysElapsed = Math.floor(
-        (today.getTime() - hardCodedStartDate.getTime()) / (1000 * 60 * 60 * 24)
-      );
-      const newOpacity = Math.max(1 - daysElapsed * 0.1, 0);
-      setOpacity(newOpacity);
-      if (newOpacity === 0) {
-        setIsVisible(false);
-      }
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     const hardCodedStartDate = new Date("2024-12-29");
+  //     const today = new Date();
+  //     const daysElapsed = Math.floor(
+  //       (today.getTime() - hardCodedStartDate.getTime()) / (1000 * 60 * 60 * 24)
+  //     );
+  //     const newOpacity = Math.max(1 - daysElapsed * 0.1, 0);
+  //     setOpacity(newOpacity);
+  //     if (newOpacity === 0) {
+  //       setIsVisible(false);
+  //     }
+  //   }
+  // }, []);
   return (
     isVisible && (
       <ThemeProvider theme={theme}>
